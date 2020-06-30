@@ -10,34 +10,41 @@
     <link rel="stylesheet" href="css/prueba.css">
 </head>
 <body class="pagina-conoceme">
-    <header class="flexContenedor">
-        <img width="200" src="img/grulla.png" alt="logo de grulla">    
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="conoceme.html">Conoceme</a>
-            <a href="portafolio.html">Portafolio</a>
-            <a href="contacto.html">Contacto</a> 
-        </nav>
-    </header>
+    <div class="container">
+        <div class="logo">
+            <img width="200" src="img/grulla.png" alt="logo de grulla">
+        </div>
+    <div class="navbar">
+    
+    <div class="icon-bar" onclick="Show()">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+    
+    <ul id="nav-lists">
+        <li class="close"><span onclick="Hide()">×</span></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="conoceme.html">Conóceme</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="contacto.html">Contactame</a></li>
+    </ul>
+    
+    </div>
+    </div>
 
     <section class="seccion-conoceme">
 
-        <img src="https://placehold.it/300x450?text=media" alt="">
+        <img width="250" src="img/img-conoceme.jpg" alt="Foto de roxanna">
 
-        <h2><strong>Titulo</strong></h2>
-        <p>You’re going to be home by 8, listening to the Talking Heads and reading 
-            Vonnegut or something. That sounds like a nice night. Mouth-breather.Why 
-            are you keeping this curiosity door lock? She shut one door! With her mind! 
-            This is not yours to fix alone. You act like you’re all alone out there in the 
-            world, but you’re not. You’re not alone. <br>
+        <h2><strong>Conóceme</strong></h2>
+        <p>Comence mi carrera como diseñadora gráfica y ahora soy Diseñadora UI y Frontend Developer. No tengo miedo de aceptar desafios que me exijan mas y que me hagan crecer profesionalmente, tambien estoy muy abierta a seguir aprendiendo. <br>
 
         <h3><strong>Skills</strong></h3>
         <div>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-            <li>Skill 4</li>
-            <li>Skill 5</li>
+            <li>Diseñadora UX/UI</li>
+            <li>Diseñadora Web</li>
+            <li>Desarrolladora Web</li>
         </div>
     </section>
 
@@ -56,6 +63,16 @@
         </div>
     <h5>Copyright &copy; 2020</h5>
     </footer>
+    <script>
+        var navList = document.getElementById("nav-lists");
+        function Show() {
+        navList.classList.add("_Menus-show");
+        }
+        
+        function Hide(){
+        navList.classList.remove("_Menus-show");
+        }
+        </script>
 
 </body>
 </html>

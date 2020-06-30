@@ -10,15 +10,28 @@
     <link rel="stylesheet" href="css/prueba.css">
 </head>
 <body class="pagina-conoceme">
-    <header class="flexContenedor">
-        <img width="200" src="img/grulla.png" alt="logo de grulla">    
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="conoceme.html">Conoceme</a>
-            <a href="portafolio.html">Portafolio</a>
-            <a href="contacto.html">Contacto</a> 
-        </nav>
-    </header>
+    <div class="container">
+        <div class="logo">
+            <img width="200" src="img/grulla.png" alt="logo de grulla">
+        </div>
+    <div class="navbar">
+    
+    <div class="icon-bar" onclick="Show()">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+    
+    <ul id="nav-lists">
+        <li class="close"><span onclick="Hide()">×</span></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="conoceme.html">Conóceme</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="contacto.html">Contactame</a></li>
+    </ul>
+    
+    </div>
+    </div>
     <section class="seccion-contacto">
         <h2>Enviame tus dudas.</h2>
         <form action="">
@@ -59,7 +72,16 @@
             </div>
         <h5>Copyright &copy; 2020</h5>
     </footer>
-
+    <script>
+        var navList = document.getElementById("nav-lists");
+        function Show() {
+        navList.classList.add("_Menus-show");
+        }
+        
+        function Hide(){
+        navList.classList.remove("_Menus-show");
+        }
+        </script>
     
 </body>
 </html>
